@@ -1,0 +1,5 @@
+$("#progressSpinner").hide();
+
+function isFormSubmitted() {	
+		$("#progressSpinner").show();
+}

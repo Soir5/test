@@ -1,0 +1,58 @@
+if (typeof jQuery !== 'undefined') {
+    (function ($) {
+        $('#spinner').ajaxStart(function () {
+            $(this).fadeIn();
+        }).ajaxStop(function () {
+            $(this).fadeOut();
+        });
+    })(jQuery);
+}
+
+$(document).ready(function () {
+    $('input,select').keypress(function (event) {
+        var keycode = (event.keyCode ? event.keyCode : event.which);
+        if (keycode == '13' && !this.click()) {
+            return false;
+        }
+    });
+
+    $('input[type="submit"][value="Save and Exit"]').on('click', function () {
+        jQuery.each(trackers, function (i, val) {
+            const values = val.split("_");
+            let [value2, value3] = [values[1], values[2]];
+            if(value3 != '' && value2 == 'SYS') {
+                gtag('event', 'application_click', {'send_to': value3, 'event_category': 'Save and Exit', 'event_label': 'Save and Exit', 'dimension2': prospectId});
+            }
+            if(value3 != '' && value2 == 'INST') {
+                gtag('event', 'application_click', {'send_to': value3, 'event_category': 'Save and Exit', 'event_label': 'Save and Exit', 'dimension2': prospectId});
+            }
+        })
+    });
+
+    $('a:contains("Logout")').on('click', function () {
+        jQuery.each(trackers, function (i, val) {
+            const values = val.split("_");
+            let [value2, value3] = [values[1], values[2]];
+            if(value3 != '' && value2 == 'SYS') {
+                gtag('event', 'application_click', {'send_to': value3, 'event_category': 'Logout', 'event_label': 'Logout', 'dimension2': prospectId});
+            }
+            if(value3 != '' && value2 == 'INST') {
+                gtag('event', 'application_click', {'send_to': value3, 'event_category': 'Logout', 'event_label': 'Logout', 'dimension2': prospectId});
+            }
+        })
+    });
+
+    $('a:contains("eServices")').on('click', function () {
+        jQuery.each(trackers, function (i, val) {
+            const values = val.split("_");
+            let [value2, value3] = [values[1], values[2]];
+            if(value3 != '' && value2 == 'SYS') {
+                gtag('event', 'application_click', {'send_to': value3, 'event_category': 'eServices', 'event_label': 'eServices', 'dimension2': prospectId});
+            }
+            if(value3 != '' && value2 == 'INST') {
+                gtag('event', 'application_click', {'send_to': value3, 'event_category': 'eServices', 'event_label': 'eServices', 'dimension2': prospectId});
+            }
+        })
+    });
+
+});

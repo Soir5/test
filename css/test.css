@@ -1,0 +1,19 @@
+header{
+    font-size: 50px;
+    font-family: "Constantia";
+    font-weight: bold;
+    background-color: black;
+    border-radius: 100px;
+    color: purple;
+
+}
+body{
+    background-color: dimgrey;
+    text-align: center;
+    font-family: "Ink Free";
+}
+
+.woza{
+    width: 400px;
+    height: 400px;
+}

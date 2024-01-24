@@ -1,0 +1,14 @@
+.msncu-logo-hdr{background:url('../images/eservices/campus/071/responsive-logo.png') no-repeat scroll 10px 0 #4c035d;height:70px;}
+.navbar-inner{background-color:#F7E402;*background-color:#F7E402;background-image:linear-gradient(to bottom,#FAF078,#F7E402);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#FAF078',endColorstr='#F7E402',GradientType=0);border:3px solid #25072E;}
+.navbar-brand{color:#111 !important;text-shadow:0 2px 2px #fff;}
+.form-signin-heading{background-color:#481259;background-image:linear-gradient(to bottom,#73298A,#481259);color:#fff;}
+.navbar-inverse .navbar-nav > li > a {
+    color: #222;
+}
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus{color:#333;}
+/* Landscape phones and down */
+@media (max-width:480px){.msncu-logo-hdr{display:none;height:3px;}
+.footer{background:url('../images/eservices/campus/071/responsive-logo.png') no-repeat scroll center 0 #4c035d;background-size:95%;padding-top:40px;color:#ddd;}
+.footer h2{color:#ddd;}
+}

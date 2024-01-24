@@ -1,0 +1,19 @@
+.navbar, .msncu-logo-hdr, footer{display:none}
+.container .jumbotron {border:none; padding-left: 0px; padding-right: 0px; border-radius: 0px;}
+.jumbotron {background-color: #fff; line-height: auto; margin-bottom:0px; margin-top: 0px; padding-top: 0px}
+.jumbotron h1 {line-height: normal}
+.form-control::-moz-placeholder {color: #fff;}
+.rate-table, .radio-block {border:none;}
+.recomndtn-headers { background:none; color:#000; filter: none; border: 3px solid #333;}
+.form-text-field {margin-bottom: 1px;}
+.eighteen-px {font-weight: normal; font-size:.95em;}
+h1, h2, h3 { margin-bottom: 2px;}
+#page-body {top: 1em;  left: 1em; position: absolute;}
+.display-answers {padding: 0px 3px;}
+.not-selected-answer{border-right: 1px solid #000; padding: 0px 5px;}
+.not-selected-answer {font-size: 100%: font-weight: 400; margin-left: 1px}
+.selected-answer {font-weight: 500; border: 1px solid #000; padding: 0px 5px}
+.no-rt-bdr {border: none; font-weight: 400;}
+.display-answers {border: 1px dashed #ccc; margin: 0px 10px;}
+.table-selected-choice {margin-left: 0px;}
+.form-text-field {font-size: .8em; line-height: 1em; padding-top: 3px;}

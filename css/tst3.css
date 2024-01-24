@@ -1,0 +1,13 @@
+
+
+BODY{
+    background-color: black;
+}
+div{
+    background-color: darkgrey;
+    border-radius: 20px;
+
+}
+.one{
+    float: right;
+}

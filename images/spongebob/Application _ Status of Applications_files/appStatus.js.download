@@ -1,0 +1,81 @@
+$(document).ready(function () {
+
+    if(typeof gaAccountAppId != 'undefined') {
+        jQuery.each(gaAccountAppId, function (i, val) {
+            const values = i.split("_");
+            let [value2, value3] = [values[1], values[2]];
+            if(value3 != '' && value2 == 'SYS') {
+                gtag('event', 'application_submitted', {'send_to': value3, 'event_category': 'Submitted Applications', 'event_label': 'Submit Page', 'dimension1': val.toString(), 'dimension2': prospectId});
+            }
+            if(value3 != '' && value2 == 'INST') {
+                gtag('event', 'application_submitted', {'send_to': value3, 'event_category': 'Submitted Applications', 'event_label': 'Submit Page', 'dimension1': val.toString(), 'dimension2': prospectId});
+            }
+        });
+    }
+
+    $('a:contains("Pay Now")').on('click', function () {
+        jQuery.each(trackers, function (i, val) {
+            const values = val.split("_");
+            let [value2, value3] = [values[1], values[2]];
+            if(value3 != '' && value2 == 'SYS') {
+                gtag('event', 'application_click', {'send_to': value3, 'event_category': 'Pay Now', 'event_label': 'Status Page', 'dimension2': prospectId});
+            }
+            if(value3 != '' && value2 == 'INST') {
+                gtag('event', 'application_click', {'send_to': value3, 'event_category': 'Pay Now', 'event_label': 'Status Page', 'dimension2': prospectId});
+            }
+        })
+     });
+
+    $('a:contains("+ Apply to Another Institution")').on('click', function () {
+        jQuery.each(trackers, function (i, val) {
+            const values = val.split("_");
+            let [value2, value3] = [values[1], values[2]];
+            if(value3 != '' && value2 == 'SYS') {
+                gtag('event', 'application_click', {'send_to': value3, 'event_category': 'Apply to Another Institution', 'event_label': 'Status Page', 'dimension2': prospectId});
+            }
+            if(value3 != '' && value2 == 'INST') {
+                gtag('event', 'application_click', {'send_to': value3, 'event_category': 'Apply to Another Institution', 'event_label': 'Status Page', 'dimension2': prospectId});
+            }
+        })
+    });
+
+    $('a:contains("Text Messaging Opt In")').on('click', function () {
+        jQuery.each(trackers, function (i, val) {
+            const values = val.split("_");
+            let [value2, value3] = [values[1], values[2]];
+            if(value3 != '' && value2 == 'SYS') {
+                gtag('event', 'application_click', {'send_to': value3, 'event_category': 'Text Messaging Opt In', 'event_label': 'Status Page', 'dimension2': prospectId});
+            }
+            if(value3 != '' && value2 == 'INST') {
+                gtag('event', 'application_click', {'send_to': value3, 'event_category': 'Text Messaging Opt In', 'event_label': 'Status Page', 'dimension2': prospectId});
+            }
+        })
+    });
+
+    $('#print-preview-checklist').on('click', function () {
+        jQuery.each(trackers, function (i, val) {
+            const values = val.split("_");
+            let [value2, value3] = [values[1], values[2]];
+            if(value3 != '' && value2 == 'SYS') {
+                gtag('event', 'application_click', {'send_to': value3, 'event_category': 'Print Preview Checklist', 'event_label': 'Status Page', 'dimension2': prospectId});
+            }
+            if(value3 != '' && value2 == 'INST') {
+                gtag('event', 'application_click', {'send_to': value3, 'event_category': 'Print Preview Checklist', 'event_label': 'Status Page', 'dimension2': prospectId});
+            }
+        })
+    });
+
+    $('#print-checklist').on('click', function () {
+        jQuery.each(trackers, function (i, val) {
+            const values = val.split("_");
+            let [value2, value3] = [values[1], values[2]];
+            if(value3 != '' && value2 == 'SYS') {
+                gtag('event', 'application_click', {'send_to': value3, 'event_category': 'Print Checklist', 'event_label': 'Status Page', 'dimension2': prospectId});
+            }
+            if(value3 != '' && value2 == 'INST') {
+                gtag('event', 'application_click', {'send_to': value3, 'event_category': 'Print Checklist', 'event_label': 'Status Page', 'dimension2': prospectId});
+            }
+        })
+    });
+
+});
